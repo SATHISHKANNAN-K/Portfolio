@@ -133,7 +133,12 @@ body {
   color:white;
   font-size:smaller;
 }
-
+.name{
+  columns:auto;align-items: center; display: flex;justify-content: center;flex-direction: column;
+}
+.navbar{
+  position: sticky;
+}
 /* .logo-wrapper {
   position: fixed;
   bottom: 1rem;
