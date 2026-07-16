@@ -1,0 +1,57 @@
+.hero{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    align-items:center;
+    gap:80px;
+    width:80%;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+.profile img{
+    width:240px;
+    height:300px;
+    border-radius:10%;
+    object-fit:fill;
+    /* border:4px solid #0038b9; */
+    box-shadow:0 0 40px rgba(0,212,255,.5); 
+}
+/* 
+.content{
+    max-width:650px;
+}
+
+.content h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+#typing{
+    font-size:20px;
+    line-height:1.8;
+    border-right:3px solid #00d4ff;
+    white-space:pre-wrap;
+    overflow:hidden;
+} */
+
+.content{
+    background:rgb(0, 0, 0);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    align-self: center;
+}
+
+#typing{
+    color:#f2fff8;
+    /* font-family:monospace; */
+    font-size:12px;
+}
+
+.content h1{
+    color:white;
+}
