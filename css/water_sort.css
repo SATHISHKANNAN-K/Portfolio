@@ -1,0 +1,181 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  color:white;
+  overflow:hidden;
+}
+
+.container{
+  text-align:center;
+  width:95%;
+  max-width:1000px;
+}
+
+h1{
+  margin-bottom:25px;
+  font-size:2.5rem;
+  text-shadow:0 0 10px rgba(255,255,255,.3);
+}
+
+.top{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  margin-bottom:30px;
+}
+
+.top h2{
+  font-size:2rem;
+}
+
+#board{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+  padding:20px;
+}
+
+.bottle{
+  width:80px;
+  height:260px;
+  border:4px solid rgba(255,255,255,.9);
+  border-top:none;
+  border-radius:0 0 28px 28px;
+  display:flex;
+  flex-direction:column-reverse;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+  transition:transform .25s, box-shadow .25s, border-color .25s;
+}
+
+/* Glass shine */
+.bottle::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:10px;
+  width:12px;
+  height:200px;
+  background:rgba(255,255,255,.25);
+  border-radius:10px;
+  z-index:2;
+}
+
+.bottle:hover{
+  transform:translateY(-8px);
+}
+
+.selected{
+  border-color:#FFD54F;
+  box-shadow:0 0 25px rgba(255,213,79,.8);
+  transform:translateY(-12px) scale(1.05);
+}
+
+.layer{
+  height:25%;
+  width:100%;
+  transition:all .4s ease;
+  animation:fill .4s ease;
+  position:relative;
+}
+
+/* Water wave effect */
+.layer::after{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:0;
+  width:100%;
+  height:16px;
+  background:rgba(255,255,255,.15);
+  border-radius:50%;
+}
+
+@keyframes fill{
+  from{
+    transform:translateY(20px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+.buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+button{
+  padding:14px 30px;
+  border:none;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  box-shadow:0 6px 15px rgba(37,99,235,.4);
+  transition:transform .2s, box-shadow .2s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(37,99,235,.6);
+}
+
+#message{
+  margin-top:25px;
+  font-size:26px;
+  font-weight:bold;
+  min-height:40px;
+  text-shadow:0 0 10px rgba(255,255,255,.4);
+}
+
+/* Confetti */
+.confetti{
+  position:fixed;
+  width:10px;
+  height:10px;
+  top:-20px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+@media(max-width:600px){
+  .bottle{
+    width:65px;
+    height:220px;
+  }
+
+  .top{
+    gap:30px;
+  }
+
+  h1{
+    font-size:2rem;
+  }
+}

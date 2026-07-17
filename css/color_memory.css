@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.container{
+
+    text-align:center;
+    color:white;
+}
+
+h1{
+
+    margin-bottom:20px;
+}
+
+.info{
+
+    display:flex;
+    justify-content:space-between;
+    width:320px;
+    margin:auto;
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+.game-board{
+
+    width:320px;
+    height:320px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.btn{
+
+    border-radius:20px;
+    cursor:pointer;
+    transition:.2s;
+    opacity:.85;
+}
+
+.btn:hover{
+
+    transform:scale(1.04);
+}
+
+.red{
+    background:#ef4444;
+}
+
+.blue{
+    background:#3b82f6;
+}
+
+.green{
+    background:#22c55e;
+}
+
+.yellow{
+    background:#facc15;
+}
+
+.active{
+
+    opacity:1;
+    transform:scale(.92);
+    filter:brightness(180%);
+    box-shadow:0 0 30px white;
+}
+
+button{
+
+    margin-top:25px;
+
+    padding:12px 35px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#10b981;
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+button:hover{
+
+    background:#059669;
+}
+
+#message{
+
+    margin-top:20px;
+}

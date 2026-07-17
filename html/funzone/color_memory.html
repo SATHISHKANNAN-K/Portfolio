@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Memory Game</title>
+
+<link rel="stylesheet" href="/css/color_memory.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎨 Color Memory</h1>
+
+    <div class="info">
+        <span>Level: <b id="level">0</b></span>
+        <span>Score: <b id="score">0</b></span>
+    </div>
+
+    <div class="game-board">
+
+        <div class="btn red" data-color="0"></div>
+        <div class="btn blue" data-color="1"></div>
+        <div class="btn green" data-color="2"></div>
+        <div class="btn yellow" data-color="3"></div>
+
+    </div>
+
+    <button id="startBtn">Start Game</button>
+
+    <h3 id="message">Press Start</h3>
+
+</div>
+
+<script src="/script/color_memory.js"></script>
+
+</body>
+</html>
